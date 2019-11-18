@@ -1,0 +1,5 @@
+nasm -f elf32 kernel.asm -o kasm.o  //  for compiling kernel.asm
+gcc -m32 -c kernel.c -o kc.o        //  for compiling kernel.c 
+ld -m elf_i386 -T link.ld -o kernel.bin kasm.o kc.o // for linking both 
+                                                        the above files 
+qemu-system-i386 -net user -kernel kernel.bin // for executing the bindary file
