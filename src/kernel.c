@@ -18,14 +18,19 @@ kmain()
         {
             print("\nucmd :   for starting a new ultimate terminal");
             print("\nclr :   for clearing the screen");
+            print("\nsrc :   for displaying source");            
         }
         else if(strEql(ch,"clr"))
         {
             clearScreen();    
         }
+        else if(strEql(ch,"src"))
+        {
+            print("\nsrc @ https://github.com/elsonjose/slate");
+        }
         else
         {
-           print("\ncommand not found\n");
+           print("\ncommand not found");
         }
         
         print("\n");
