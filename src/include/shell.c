@@ -21,7 +21,13 @@ void launch_shell(int n)
             print("\nucmd   :   for starting a new ultimate terminal");
             print("\nexit   :   for exiting the shell");
             print("\nsrc    :   for displaying source");
-            print("\nclr    :   for clearing screen. Bug not fixed.");            
+            print("\nclr    :   for clearing screen (Bug not fixed)");
+            print("\ndbo    :   divide by zero");            
+        }
+        else if(strContain("dbo",ch))
+        {
+            print("\n");
+            int n = 5/0;
         }
         else if(strContain("src",ch))
         {
@@ -30,6 +36,10 @@ void launch_shell(int n)
         else if(strContain("clr",ch))
         {
             clearScreen();    
+        }
+        else if(strContain("exit",ch))
+        {
+            print("\nexiting the shell");  
         }
         else
         {
