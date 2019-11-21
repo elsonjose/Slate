@@ -14,12 +14,12 @@ kmain()
     {
         print("\n@Slate> ");
         string ch = readStr();
-        if(strContain("ucmd",ch) == 1)
+        if(strContain("ucmd",ch))
         {
             print("\nalready in an ultimate terminal");
 
         }
-        else if(strContain("help",ch) == 1)
+        else if(strContain("help",ch))
         {
             print("\nucmd :   for starting a new ultimate terminal");
             print("\nclr :   for clearing the screen");
