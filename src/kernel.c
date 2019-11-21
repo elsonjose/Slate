@@ -7,32 +7,34 @@
 kmain()
 {
     isr_install();
-    clearScreen();
+    //clearScreen();
     //int a=10/0;
-    print("Slate OS Active\nType help for all commands\n\n");
+    print("Slate OS Active \nType help for all commands\n\n");
     while (1)
     {
         print("\n@Slate> ");
         string ch = readStr();
-        if(strEql(ch,"ucmd"))
+        if(strContain("ucmd",ch) == 1)
         {
             print("\nalready in an ultimate terminal");
 
         }
-        else if(strEql(ch,"help"))
+        else if(strContain("help",ch) == 1)
         {
             print("\nucmd :   for starting a new ultimate terminal");
             print("\nclr :   for clearing the screen");
             print("\nsrc :   for displaying source");            
         }
-        else if(strEql(ch,"clr"))
-        {
-            clearScreen();    
-        }
-        else if(strEql(ch,"src"))
+        else if(strContain("src",ch))
         {
             print("\nsrc @ https://github.com/elsonjose/slate");
         }
+/*
+        else if(strContain("clr",ch))
+        {
+            clearScreen();    
+        }
+*/
         else
         {
            print("\ncommand not found");

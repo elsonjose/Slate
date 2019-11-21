@@ -24,3 +24,22 @@ uint8 strEql(string ch1,string ch2)
         return result;
 }
 
+uint8 strContain(string ch1,string ch2)                     
+{
+        uint8 result = 1;
+        uint8 size = strlength(ch1) - 1;
+        uint8 siz = strlength(ch2) - 2;
+        uint8 i = 0;
+        if(size != siz)
+        {
+            result = 0;
+        }
+        else
+        for(i=0;i<=size;i++)
+        {
+               
+                if(ch1[i] != ch2[i])
+                    result = 0;
+        }
+        return result;
+}
