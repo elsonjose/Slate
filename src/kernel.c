@@ -1,9 +1,14 @@
 #include "include/screen.h"
 #include "include/kb.h"
 #include "include/string.h"
+#include "include/isr.h"
+#include "include/idt.h"
+
 kmain()
 {
+    isr_install();
     clearScreen();
+    //int a=10/0;
     print("Slate OS Active\nType help for all commands\n\n");
     while (1)
     {
